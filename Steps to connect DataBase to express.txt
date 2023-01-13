@@ -1,0 +1,40 @@
+student
+sid(pk)
+sname
+
+
+faculy
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Aniket@123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'loclhost';
+FLUSH PRIVILEGES;
+
+
+---------------------------------------------------------------------------------------------------
+
+
+>>create a new user mysql command line client:
+
+cmd: create user 'uname'@'localhost' identified by 'password';
+check all users
+cmd: select user from mysql.user
+
+
+
+>>Grant all the privileges to new user:
+
+cmd:GRANT ALL PRIVILEGES ON *.* TO 'uname'@'localhost';
+cmd:FLUSH PRIVILEGES;
+
+>>Open the bin folder in c:/program files/mysql/bin
+go to cmd from here
+
+cmd:mysql -u uname -p
+>>then Enter Password: will be prompted
+enter the password
+
+>>Alter the user and change from root to uname
+
+ALTER USER 'uname'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
